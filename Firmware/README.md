@@ -4,6 +4,8 @@ For Ubuntu based systems install the prerequisite packages using the following c
 
 **sudo apt-get install binutils gcc-avr avr-libc uisp avrdude flex byacc bison**
 
+Additionally the arduino IDE must be installed. A Linux binary may be downloaded from [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software).
+
 # Installation of Auxiliary MCU Firmware
 
 In order to flash the auxiliary firmware onto an MCU the ISP programmer must first be connected to the ATMega328. 
