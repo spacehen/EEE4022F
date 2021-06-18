@@ -50,7 +50,7 @@ For the second method of credential compromise Figure 7.1 shows the connections 
 \end{figure}
 
 \subsubsection{Method}
-Once all the requirements were in place the procedure for the experiment then consisted of visiting a website login portal (outlook was used in this case) and selecting the 'Store Password' button in the extension UI (Figure 5.5). This would trigger the exploit and transmit the password to the remote endpoint controlled by an attacker. The exchange of serial data would also be captured by the CP2102 board during encryption. 
+Once all the requirements were in place the procedure for the experiment then consisted of visiting a website login portal (outlook was used in this case) , entering a username (test\_user) and password (testing123\#) and selecting the 'Store Credential' button in the extension UI (Figure 5.5). This would trigger the exploit and transmit the password to the remote endpoint controlled by an attacker. The exchange of serial data would also be captured by the CP2102 board during encryption. 
 
 The time taken to perform both methods of password compromise was captured for three different password encryption stages using a software timer (\hyperref[sec:timerp]{Appendix E.4}).
 \subsubsection{Results}
@@ -63,10 +63,10 @@ Figure 7.2 depicts the results of the first method of credential extraction. The
 \label{fig:gantt}
 \end{figure}
 
-The Arduino serial monitor was used to monitor the incoming data delivered to the CP2102 board. After the 'Store Password' button was clicked the following serial text data was captured:
+The Arduino serial monitor was used to monitor the incoming data delivered to the CP2102 board. After the 'Store Credential' button was clicked the following serial text data was captured:
 
 \begin{lstlisting}[language=bash, frame=none]
-$encrypt$ADE2...$testing123#$R01$
+$encrypt$ADE2...$test_user|!#|testing123#$R01$
 \end{lstlisting}
 
 The measured credential acquisition times are shown in Table 10. It can be seen that method 2 (using the CP2102 board) was the fastest at capturing passwords with an average acquisition time of 60.2 ms. This was then followed by method 1 with an average time of around 552 ms.
@@ -165,7 +165,7 @@ Figure 7.6 shows the prompt displayed when the second DoS attack vector was sele
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.3\columnwidth]{Figures/Fig_35.png}
+\includegraphics[width=0.3\columnwidth]{Figures/Fig_88.png}
 \caption{Browser extension. Unresponsive after command flood.}
 \label{fig:gantt}
 \end{figure}
@@ -284,7 +284,7 @@ The corresponding output file stored within: \textbf{injector-root/cmd/injector}
 $ sudo ./injector -n "nativehost" client.so
 \end{lstlisting}
 
-The user would then proceed to a random login portal, enter a username and password and click the 'Store Credential' button of the browser extension. Finally the file \textbf{leak.txt} would be inspected within the home directory for the leaked password.
+The user would then proceed to a random login portal, enter a username (test\_user) and password (test\_password) and click the 'Store Credential' button of the browser extension. Finally the file \textbf{leak.txt} would be inspected within the home directory for the leaked password.
 
 Optionally GDB could be attached to the native host to reinspect the \textbf{exec\_encrypt} function with the modified instruction bytes:
 
@@ -322,7 +322,7 @@ The contents of \textbf{leak.txt} were then outputted using the command \textbf{
 \label{fig:gantt}
 \end{figure}
 
-The output is seen to match the password entered when the 'Store Password' button within the browser extension was clicked. The results of this experiment indicate that the native host is susceptible to code injection attacks. Specifically an attacker could craft a malicious shared library object and then inject it into the native host to intercept passwords. However injection requires \textbf{sudo} level privileges which an attacker might not have on a compromised system. 
+The output is seen to match the credentials entered when the 'Store Credential' button within the browser extension was clicked. The results of this experiment indicate that the native host is susceptible to code injection attacks. Specifically an attacker could craft a malicious shared library object and then inject it into the native host to intercept passwords. However injection requires \textbf{sudo} level privileges which an attacker might not have on a compromised system. 
 
 A countermeasure to code injection might involve scanning the list of shared libraries loaded into an ELF executable and then flagging certain unauthorized shared library objects. Additionally injection relies on an internal call to the Linux specific function \textbf{dlopen}, this function could be detoured itself to fail when trying to load a shared library with a name not on a white-list for example.
 
