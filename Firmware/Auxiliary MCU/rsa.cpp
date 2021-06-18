@@ -264,9 +264,6 @@ void number_multiply(number *x, number *y, number *output)
 }
 
 // Compute modulus of two large numbers x % y using exponentiation
-// Based on GMP mpz_powm()
-// as well as OpenSSL RSA_private_encrypt
-// https://github.com/alisw/GMP/blob/2bbd52703e5af82509773264bfbd20ff8464804f/mpz/powm.c
 void number_modulus(number *x, number *y)
 {
   int diff = 0;
