@@ -1,3 +1,6 @@
+// Author: Dylan Muller
+// Student Number: MLLDYL002
+
 var start;
 var native = chrome.runtime.connectNative('com.secure.pass');
 var cmd = "";

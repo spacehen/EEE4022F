@@ -1,3 +1,6 @@
+// Author: Dylan Muller
+// Student Number: MLLDYL002
+
 #ifndef _SERIAL_H
 #define _SERIAL_H
 

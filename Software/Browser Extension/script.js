@@ -1,3 +1,6 @@
+// Author: Dylan Muller
+// Student Number: MLLDYL002
+
 document.addEventListener('DOMContentLoaded', function () {
     function extractPassword() {
         var value = [];

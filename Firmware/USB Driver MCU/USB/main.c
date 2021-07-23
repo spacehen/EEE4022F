@@ -1,3 +1,5 @@
+// Author: Dylan Muller
+// Student Number: MLLDYL002
 
 #include "usbdrv.h"
 #include "serial.h"

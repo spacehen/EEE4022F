@@ -1,3 +1,6 @@
+// Author: Dylan Muller
+// Student Number: MLLDYL002
+
 #include "./lib/nativemsg.h"
 #include <string.h>
 #include "./lib/cJSON.h"

@@ -1,3 +1,6 @@
+// Author: Dylan Muller
+// Student Number: MLLDYL002
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,3 +1,6 @@
+// Author: Dylan Muller
+// Student Number: MLLDYL002
+
 #include "rsa.h"
 
 int g_id = 0;
