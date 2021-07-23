@@ -5,3 +5,5 @@ This repository consists of three sub branches (folders):
 * /Software - source code for the browser extension and native host.
 * /Report - latex (overleaf) source code of report.
 
+**MLLDYL002.pdf** is the compiled PDF version of the project report.
+
