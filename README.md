@@ -7,5 +7,5 @@ This repository consists of three sub branches (folders):
 
 **MLLDYL002.pdf** is the compiled PDF version of the project report.
 
-Video demonstration of the system can be found [here](https://www.youtube.com/watch?v=u4TFHCfZJ7M).
+A video demonstration of the system can be found [here](https://www.youtube.com/watch?v=u4TFHCfZJ7M).
 
