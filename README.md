@@ -12,9 +12,9 @@ This repository consists of three sub branches (folders):
 * /Software - source code for the browser extension and native host.
 * /Report - latex (overleaf) source code of report.
 
-**MLLDYL002.pdf** is the compiled PDF version of the project report.
-**TOPIC.pdf** is the original topic PDF.
-**POSTER.pdf** is the project poster.
+**MLLDYL002.pdf** is the compiled PDF version of the project report.</br>
+**TOPIC.pdf** is the original topic PDF.</br>
+**POSTER.pdf** is the project poster.</br>
 
 A video demonstration of the system can be found [here](https://www.youtube.com/watch?v=u4TFHCfZJ7M).
 
